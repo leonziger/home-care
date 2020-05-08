@@ -1,0 +1,24 @@
+.widget-actions_magenta {
+    display: flex;
+
+  &__likes {
+    font-family: 'Oswald Light', sans-serif;
+    font-weight: normal;
+    color: #a46bcc;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    margin-top: 4px;
+    width: 127px;
+    margin-left: 17px;
+    position: relative;
+
+    &:before {
+      content: '';
+      width: 13px;
+      height: 11px;
+      background-image: url('../images/magenta_like.png');
+      margin-right: 9px;
+    }
+  }
+}

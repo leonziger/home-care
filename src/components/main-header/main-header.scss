@@ -1,0 +1,136 @@
+.main-header {
+  display: flex;
+  padding-top: 30px;
+  position: relative;
+  z-index: 150;
+
+  @media(max-width: 576px) {
+    padding-top: 10px;
+  }
+
+  &__container {
+    display: flex;
+
+    @media(max-width: 1200px) {
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+
+    @media(max-width: 1200px) {
+      width: 80%;
+    }
+  }
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 72px;
+
+    @media(max-width: 1200px){
+      padding: 0;
+    }
+
+    @media(max-width: 992px) {
+      justify-content: center;
+    }
+  }
+
+  &__nav {
+    padding-left: 73px;
+
+     @media(max-width: 1200px) {
+       padding: 20px;
+       position: fixed;
+       right: 0;
+       top: 0;
+       bottom: 0;
+       transform: translateX(-1500px);
+       background-color: #f1f6e8;
+       opacity: 0.9;
+       transition: 0.3s;
+       z-index: 4;
+       width: 100%;
+
+      #nav {
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+
+        & > ul {
+          flex-direction: column;
+
+          & > li {
+            padding: 5px 10px;
+            text-transform: uppercase;
+            text-decoration: none;
+            color: #fff;
+            font-size: 18px;
+
+            &:hover,
+            &:active {
+              color: #fff;
+            }
+
+            &>a {
+              padding-bottom: 15px;
+            }
+          }
+        }
+      }
+     }
+
+    @media(max-width: 640px) {
+      #nav {
+        & > ul {
+          & > li {
+            font-size: 16px;
+            line-height: 1;
+          }
+        }
+      }
+    }
+
+    &.is-open {
+      display: flex;
+      transform: translateX(0);
+      overflow-y: scroll;
+    }
+  }
+
+  &__social-media {
+    @media(max-width: 992px) {
+      display: none;
+    }
+  }
+
+  &__search-form {
+    margin-bottom: 19px;
+    width: 450px;
+
+    @media(max-width: 1200px) {
+      margin: 0 20px;
+      max-width: 450px;
+      width: 100%;
+    }
+  }
+
+  &__menu-toggle {
+    margin-top: -7px;
+    z-index: 104;
+
+    @media(max-width: 992px) {
+      margin-top: 0;
+    }
+  }
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}

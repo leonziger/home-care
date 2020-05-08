@@ -1,0 +1,24 @@
+.widget-actions_blue {
+    display: flex;
+
+  &__likes {
+    font-family: 'Oswald Light', sans-serif;
+    font-weight: normal;
+    color: #00d2d2;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    margin-top: 4px;
+    width: 127px;
+    margin-left: 17px;
+    position: relative;
+
+    &:before {
+      content: '';
+      width: 13px;
+      height: 11px;
+      background-image: url('../images/blue_like.png');
+      margin-right: 9px;
+    }
+  }
+}

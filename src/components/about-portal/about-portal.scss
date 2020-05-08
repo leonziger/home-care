@@ -1,0 +1,55 @@
+.about-portal {
+  padding-top: 60px;
+  padding-bottom: 35px;
+
+  &__container {
+    padding-left: 18px;
+    padding-right: 400px;
+
+    @media(max-width: 1366px) {
+      padding-right: 300px;
+    }
+
+    @media(max-width: 1200px) {
+      padding-right: 200px;
+    }
+
+    @media(max-width: 992px) {
+      padding-right: 100px;
+    }
+
+    @media(max-width: 800px) {
+      padding-right: 18px;
+    }
+  }
+
+  &__tales-nav {
+    padding-right: 0;
+
+    @media(max-width: 1366px) {
+      padding-right: 15px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 61px;
+
+    @media(max-width: 1366px) {
+      margin-bottom: 36px;
+    }
+  }
+
+  &__description {
+    padding-left: 4px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+
+    @media(max-width: 1200px) {
+      line-height: 1.5;
+    }
+
+    @media(max-width: 576px) {
+      line-height: 1.2;
+    }
+  }
+}

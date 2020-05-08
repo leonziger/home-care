@@ -1,0 +1,203 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: inherit;
+}
+
+:focus {
+  outline: none;
+}
+
+::-moz-focus-inner {
+  border: none;
+}
+
+::placeholder {
+  font-size: 16px;
+  color: #afafb5;
+  letter-spacing: 0.32px;
+
+  @media(max-width: 375px){
+    font-size: 14px;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+li {
+  list-style: none;
+}
+
+input{
+  border: 0;
+  outline: 0;
+}
+
+html,
+body {
+  min-height: 100%;
+}
+
+html {
+  font: 500 17px/1 'IBM Plex Sans', sans-serif;
+  color: #000;
+}
+
+body{
+  margin: 0;
+  padding: 0;
+  color: #000;
+}
+
+img {
+  max-width: 100%;
+  vertical-align: bottom;
+}
+
+hr {
+  border-top: 0;
+  border-color: #8c8c8c;
+}
+
+a {
+  color: #00a2ff;;
+  cursor: default;
+}
+
+a[href] {
+  cursor: pointer;
+}
+
+p {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  font-weight: 300;
+
+  @media(max-width: 576px) {
+    font-size: 16px;
+  }
+}
+
+table {
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+
+textarea {
+  resize: none;
+}
+
+address {
+  font-style: normal;
+}
+
+button {
+  outline: none;
+  border: 0;
+  cursor: pointer;
+  transition: $delay;
+}
+
+.h1 {
+  font-weight: 400;
+  font-size: 43px;
+  position: relative;
+  margin-bottom: 24px;
+  display: block;
+
+  @media(max-width: 1366px) {
+    font-size: 36px;
+  }
+
+  @media(max-width: 1200px) {
+    font-size: 30px;
+  }
+
+  @media(max-width: 992px) {
+    font-size: 28px;
+  }
+
+  @media(max-width: 576px) {
+    font-size: 24px;
+  }
+
+  @media(max-width: 420px) {
+    font-size: 20px;
+  }
+
+  &:after {
+    content: '';
+    position: absolute;
+    left: 5px;
+    bottom: -29px;
+    height: 5px;
+    width: 60px;
+    background: #c7dc19;
+
+    @media(max-width: 1366px) {
+      bottom: -25px;
+    }
+
+    @media(max-width: 1200px) {
+      bottom: -20px;
+    }
+
+    @media(max-width: 992px) {
+      bottom: -15px;
+    }
+  }
+}
+
+.h2 {
+  font-weight: 400;
+  font-size: 36px;
+  position: relative;
+  margin-bottom: 24px;
+  display: block;
+
+  @media(max-width: 1366px) {
+    font-size: 32px;
+  }
+
+  @media(max-width: 1200px) {
+    font-size: 28px;
+  }
+
+  @media(max-width: 992px) {
+    font-size: 26px;
+  }
+
+  @media(max-width: 576px) {
+    font-size: 22px;
+  }
+
+  @media(max-width: 420px) {
+    font-size: 18px;
+  }
+
+  &:after {
+    content: '';
+    position: absolute;
+    left: 5px;
+    bottom: -31px;
+    height: 5px;
+    width: 60px;
+    background: #c7dc19;
+
+    @media(max-width: 1366px) {
+      bottom: -25px;
+    }
+
+    @media(max-width: 1200px) {
+      bottom: -20px;
+    }
+
+    @media(max-width: 992px) {
+      bottom: -15px;
+    }
+  }
+}

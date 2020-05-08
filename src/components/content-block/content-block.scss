@@ -1,0 +1,7 @@
+.content-block {
+  padding: 64px 0 48px;
+
+  @media(max-width: 768px) {
+    padding: 30px 0;
+  }
+}
