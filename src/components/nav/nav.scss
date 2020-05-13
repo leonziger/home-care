@@ -1,16 +1,14 @@
 #nav {
   border-bottom: 1px solid #f1f1f1;
 
-  &>ul {
+  & > ul {
     display: flex;
-    margin-left: -20px;
-    margin-right: -20px;
-    margin-bottom: 0;
+    margin: 0 -18px;
 
-    &>li {
-      margin: 20px 18px 0;
+    & > li {
+      margin: 20px 17px 0;
 
-      &>a {
+      & > a {
         display: block;
         text-decoration: none;
         color: #000;
@@ -24,13 +22,49 @@
       }
 
       &.has-drop {
-        position:relative;
+        position: relative;
+        transition: 0.3s;
+
         &:hover {
           > .drop {
-            top:100%;
-            opacity:1;
-            left:5px;
-            transition:opacity .35s ease;
+            top: 100%;
+            opacity: 1;
+            left: 5px;
+            transition: opacity .35s ease;
+          }
+        }
+
+        & > a {
+          display: flex;
+          justify-content: center;
+
+          &:after {
+            display: none;
+            content: '';
+            width: 5px;
+            height: 5px;
+            margin-left: 5px;
+            border-bottom: 1px solid #000;
+            border-left: 1px solid #000;
+            transition: 0.3s;
+            transform: rotate(-45deg);
+
+            @media(max-width: 1200px) {
+              display: block;
+              margin-top: 2px;
+              margin-left: 10px;
+            }
+          }
+        }
+
+        &.open {
+          @media(max-width: 1200px) {
+            & > a {
+              &:after {
+                margin-top: 5px;
+                transform: rotate(135deg);
+              }
+            }
           }
         }
       }
@@ -38,44 +72,50 @@
   }
 
   .drop-open {
-    >.drop{display:block;}
-    >.drop-list{display:block;}
+    >.drop {
+      display: block;
+    }
+    >.drop-list {
+      display: block;
+    }
   }
 }
 
 .drop{
-  position:absolute;
-  top:-9999px;
-  left:-9999px;
-  opacity:0;
-  z-index:160;
-  list-style:none;
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+  opacity: 0;
+  z-index: 160;
+  list-style: none;
   background: #f7f9fc;
-  white-space:nowrap;
+  white-space: nowrap;
   padding: 20px;
   width: 230px;
-  transition:all 0s ease .35s, opacity .35s ease;
+  transition: all 0s ease .35s, opacity .35s ease;
   font-weight: 300;
 
   @media(max-width: 1200px) {
-    opacity:1;
-    display:none;
-    transform:none;
-    min-width:0;
-    transition:none;
-    position:static;
-    background:none;
-    white-space:normal;
-    padding: 15px 0 0 20px;
-    background:transparent;
-    box-shadow:none;
+    opacity: 1;
+    display: none;
+    transform: none;
+    min-width: 0;
+    transition: none;
+    position: static;
+    background: none;
+    white-space: normal;
+    padding: 15px 0 0 0;
+    background: transparent;
+    box-shadow: none;
+    text-transform: none;
   }
   .drop-list{
     margin: 0;
     display: flex;
-    list-style:none;
-    padding:0;
+    list-style: none;
+    padding: 0;
     flex-direction: column;
+
     >li{
       &:not(:last-child) {
         padding-bottom: 10px;
@@ -85,12 +125,13 @@
       &:not(:first-child){
         margin-top: 15px;
       }
-      >a{
-        display:block;
+      >a {
+        display: block;
         color: #000;
         white-space: pre-wrap;
         text-decoration: none;
-        &:hover{
+
+        &:hover {
           color: #9bacce;
         }
       }
